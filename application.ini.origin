@@ -1,0 +1,17 @@
+[session]
+path = ./session
+
+[database]
+
+[MeCab]
+user_dict =C:\dev\python\yukkuri.dic
+sys_dict =
+
+[FaceBook]
+app_id = TODO
+app_secret = TODO
+
+[system]
+path0 = /home/needtec/local/lib/python/site-packages/Genshi-0.6-py2.7.egg
+path1 = /home/needtec/local/lib/python2.7/site-packages
+
