@@ -15,7 +15,7 @@
 <body>
   <div id="contents">
     <h1>facebookページの解析</h1>
-    <p>ページ名/ID：<input id="page_name" type="text" name="name" size="30" maxlength="20"></input></p>
+    <p>ページ名/ID(meで自分のニュース)：<input id="page_name" type="text" name="name" size="30" maxlength="20"></input></p>
     <p><button id="check_page">チェック</button></p>
     <div id="error_message" class="error"></div>
     <div id="page_info"></div>
