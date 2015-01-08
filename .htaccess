@@ -7,4 +7,4 @@ RewriteEngine On
 # RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.cgi/$1 [L]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/check_twitter/index.cgi/$1 [L]
