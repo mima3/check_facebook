@@ -63,7 +63,7 @@ def analyzePageJson(page):
     access_token = session['access_token']
     try:
         analyzer = FacebookAnalyzer(access_token)
-        data = analyzer.AnalyzePage(page, 100)
+        data = analyzer.AnalyzePage(page, 200)
         res['data'] = data
         return json.dumps(res)
     except facebook.GraphAPIError, ex:
@@ -82,7 +82,8 @@ def login():
     verification_code = request.query.code
     callback_url = callback_url = "https://" + os.environ['HTTP_HOST']  + os.path.dirname(os.environ['REQUEST_URI']) + '/login'
     args = dict(client_id=facebook_app_id,
-                redirect_uri=callback_url)
+                redirect_uri=callback_url,
+                scope='read_stream')
     if verification_code:
         args["client_secret"] = facebook_app_secret
         args["code"] = verification_code
